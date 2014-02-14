@@ -1,12 +1,12 @@
-# revision 32271
+# revision 32883
 # category Package
 # catalog-ctan /macros/generic/xint
-# catalog-date 2013-11-28 18:24:01 +0100
+# catalog-date 2014-02-05 22:41:56 +0100
 # catalog-license lppl1.3
-# catalog-version 1.09h
+# catalog-version 1.09ka
 Name:		texlive-xint
-Version:	1.09h
-Release:	5
+Version:	1.09ka
+Release:	1
 Summary:	Expandable operations on long numbers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xint
@@ -20,18 +20,25 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-The bundle provides four packages: - xint, which provides
+The bundle provides four packages: xint, which provides
 expandable TeX macros that implement the basic arithmetic
 operations of addition, subtraction, multiplication and
 division, as applied to arbitrarily long numbers represented as
-chains of digits with an optional minus sign; - xintgcd, which
-provides implementations of the Euclidean algorithm, and of its
-typesetting; - xintfrac, which computes fractions using xint; -
-xintseries, which computes partial sums using xint; and -
-xintcfrac, which deals with the computation of continued
-fractions. All of the packages' computations are done in a way
-that they can operate in an expanding environment. The packages
-may be used either with Plain TeX or LaTeX.
+chains of digits with an optional minus sign; xinttools is
+loaded by xint (hence by all other packages of the bundle,
+too): it provides utilities of independent interest such as
+expandable and non-expandable loops. xintfrac, which computes
+fractions using xint; xintexpr, which extends xintfrac with an
+expandable parser of expressions involving integers and a wide
+variety of operators; xintbinhex provides conversions to and
+from binary and hexadecimal bases; xintseries, which provides
+basic functionality for computing partial sums using xint;
+xintgcd, which provides implementations of the Euclidean
+algorithm, and of its typesetting; xintcfrac, which deals with
+the computation of continued fractions, All of the packages'
+computations are done in a way that they can operate in an
+expanding environment. The packages may be used either with
+Plain TeX or LaTeX.
 
 %post
     %{_sbindir}/texlive.post
@@ -51,7 +58,7 @@ may be used either with Plain TeX or LaTeX.
 %{_texmfdistdir}/tex/generic/xint/xintgcd.sty
 %{_texmfdistdir}/tex/generic/xint/xintseries.sty
 %{_texmfdistdir}/tex/generic/xint/xinttools.sty
-%doc %{_texmfdistdir}/doc/generic/xint/README
+%doc %{_texmfdistdir}/doc/generic/xint/xint.dtx
 %doc %{_texmfdistdir}/doc/generic/xint/xint.pdf
 #- source
 %doc %{_texmfdistdir}/source/generic/xint/xint.dtx
