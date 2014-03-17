@@ -1,11 +1,11 @@
-# revision 32883
+# revision 33062
 # category Package
 # catalog-ctan /macros/generic/xint
-# catalog-date 2014-02-05 22:41:56 +0100
+# catalog-date 2014-02-27 13:32:50 +0100
 # catalog-license lppl1.3
-# catalog-version 1.09ka
+# catalog-version 1.09m
 Name:		texlive-xint
-Version:	1.09ka
+Version:	1.09m
 Release:	1
 Summary:	Expandable operations on long numbers
 Group:		Publishing
@@ -58,7 +58,7 @@ Plain TeX or LaTeX.
 %{_texmfdistdir}/tex/generic/xint/xintgcd.sty
 %{_texmfdistdir}/tex/generic/xint/xintseries.sty
 %{_texmfdistdir}/tex/generic/xint/xinttools.sty
-%doc %{_texmfdistdir}/doc/generic/xint/xint.dtx
+%doc %{_texmfdistdir}/doc/generic/xint/README
 %doc %{_texmfdistdir}/doc/generic/xint/xint.pdf
 #- source
 %doc %{_texmfdistdir}/source/generic/xint/xint.dtx
