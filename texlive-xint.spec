@@ -6,7 +6,7 @@
 # catalog-version 1.09m
 Name:		texlive-xint
 Version:	1.09m
-Release:	1
+Release:	2
 Summary:	Expandable operations on long numbers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xint
