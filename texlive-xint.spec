@@ -1,12 +1,12 @@
-# revision 33062
+# revision 33347
 # category Package
 # catalog-ctan /macros/generic/xint
-# catalog-date 2014-02-27 13:32:50 +0100
+# catalog-date 2014-04-01 20:36:20 +0200
 # catalog-license lppl1.3
-# catalog-version 1.09m
+# catalog-version 1.09n
 Name:		texlive-xint
-Version:	1.09m
-Release:	2
+Version:	1.09n
+Release:	1
 Summary:	Expandable operations on long numbers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xint
