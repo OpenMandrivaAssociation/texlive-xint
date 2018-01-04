@@ -1,12 +1,6 @@
-# revision 33347
-# category Package
-# catalog-ctan /macros/generic/xint
-# catalog-date 2014-04-01 20:36:20 +0200
-# catalog-license lppl1.3
-# catalog-version 1.09n
 Name:		texlive-xint
-Version:	1.09n
-Release:	4
+Version:	1.2p
+Release:	1
 Summary:	Expandable operations on long numbers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xint
@@ -50,19 +44,10 @@ Plain TeX or LaTeX.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/xint/xint.sty
-%{_texmfdistdir}/tex/generic/xint/xintbinhex.sty
-%{_texmfdistdir}/tex/generic/xint/xintcfrac.sty
-%{_texmfdistdir}/tex/generic/xint/xintexpr.sty
-%{_texmfdistdir}/tex/generic/xint/xintfrac.sty
-%{_texmfdistdir}/tex/generic/xint/xintgcd.sty
-%{_texmfdistdir}/tex/generic/xint/xintseries.sty
-%{_texmfdistdir}/tex/generic/xint/xinttools.sty
-%doc %{_texmfdistdir}/doc/generic/xint/README
-%doc %{_texmfdistdir}/doc/generic/xint/xint.pdf
+%{_texmfdistdir}/tex/generic/xint
+%doc %{_texmfdistdir}/doc/generic/xint
 #- source
-%doc %{_texmfdistdir}/source/generic/xint/xint.dtx
-%doc %{_texmfdistdir}/source/generic/xint/xint.ins
+%doc %{_texmfdistdir}/source/generic/xint
 
 #-----------------------------------------------------------------------
 %prep
