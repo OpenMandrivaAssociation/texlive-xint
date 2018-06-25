@@ -1,5 +1,5 @@
 Name:		texlive-xint
-Version:	1.3a
+Version:	1.3c
 Release:	1
 Summary:	Expandable operations on long numbers
 Group:		Publishing
