@@ -1,13 +1,13 @@
 Name:		texlive-xint
-Version:	1.3e
+Version:	63562
 Release:	1
 Summary:	Expandable operations on long numbers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xint
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -35,12 +35,12 @@ expanding environment. The packages may be used either with
 Plain TeX or LaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -51,7 +51,8 @@ Plain TeX or LaTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
