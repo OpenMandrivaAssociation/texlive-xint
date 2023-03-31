@@ -1,6 +1,6 @@
 Name:		texlive-xint
 Version:	63562
-Release:	1
+Release:	2
 Summary:	Expandable operations on long numbers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xint
