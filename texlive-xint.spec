@@ -3,7 +3,7 @@ Version:	63562
 Release:	2
 Summary:	Expandable operations on long numbers
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/xint
+URL:		https://www.ctan.org/tex-archive/macros/generic/xint
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.doc.r%{version}.tar.xz
