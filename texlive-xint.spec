@@ -1,61 +1,41 @@
-Name:		texlive-xint
-Version:	63562
-Release:	2
-Summary:	Expandable operations on long numbers
+%global tl_name xint
+%global tl_revision 76255
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.4o
+Release:	%{tl_revision}.1
+Summary:	Expandable arbitrary precision floating point and integer operations
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/generic/xint
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.source.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xint.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The bundle provides four packages: xint, which provides
-expandable TeX macros that implement the basic arithmetic
-operations of addition, subtraction, multiplication and
-division, as applied to arbitrarily long numbers represented as
-chains of digits with an optional minus sign; xinttools is
-loaded by xint (hence by all other packages of the bundle,
-too): it provides utilities of independent interest such as
-expandable and non-expandable loops. xintfrac, which computes
-fractions using xint; xintexpr, which extends xintfrac with an
-expandable parser of expressions involving integers and a wide
-variety of operators; xintbinhex provides conversions to and
-from binary and hexadecimal bases; xintseries, which provides
-basic functionality for computing partial sums using xint;
-xintgcd, which provides implementations of the Euclidean
-algorithm, and of its typesetting; xintcfrac, which deals with
-the computation of continued fractions, All of the packages'
-computations are done in a way that they can operate in an
-expanding environment. The packages may be used either with
-Plain TeX or LaTeX.
+Loading xintexpr provides \xinteval and \xintfloateval. \xintfloateval
+evaluates numerical expressions. The floating point precision defaults
+to 16 decimal digits and can be set by user. Trigonometry, exponential
+and logarithms are implemented up to a maximal precision of 62 decimal
+digits. \xinteval computes exactly with integers, fractions, and decimal
+numbers or numbers in scientific notation. Note though that multiplying
+two floating point numbers will about double the number of digits, and
+so on, because the algebra is done exactly. Both are compatible with
+expansion-only context. Loading xintexpr imports automatically various
+other modules that it depends upon. Among them: xinttools: utilities
+such as expandable and non-expandable loops, xint: macros implementing
+in particular the basic operations on arbitrarily long integers,
+xintbinhex: conversions between decimal and binary, octal, or
+hexadecimal bases for arbitrarily long integers, xintfrac: macros
+implementing in particular the basic operations on arbitrarily large
+fractions, decimal numbers, or numbers in scientific notation. Further
+modules of independent interest include xintgcd, xintseries and
+xintcfrac. You can use xintexpr (and the other components) with LaTeX
+(via \usepackage) or also with Plain TeX, OpTeX, or ConTeXt (via \input
+xintexpr.sty). All the components are documented in the file xint.pdf,
+which also contains the commented source code.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/generic/xint
-%doc %{_texmfdistdir}/doc/generic/xint
-#- source
-%doc %{_texmfdistdir}/source/generic/xint
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
